@@ -1,7 +1,12 @@
 html,body{
-    font-family: 'Open Sans';
+    /*font-family: 'Open Sans';*/
     min-height: 100%;
     position: relative;
+}
+
+*
+{
+	font-family:arial;
 }
 body{
     margin: 0 0 60px;
@@ -14,68 +19,80 @@ body{
 }
 
 .corpo .topo{
-    height: 190px;
     width: 100%;
-    float: left;
-    background: #EDF3FF;
     margin: 0%;
     padding: 0%;
 }
-.corpo .topo .logo{
+
+.corpo .topo .nuevo{
+	width:90%;
+	margin:0 auto;
+	display: flex;
+	align-items:center;
+	padding: 1em 0;
+	justify-content: space-between;
+}
+
+.corpo .topo .nuevo .logo{
     margin: 0.2em;    
-    width: 150px;
-    height: 152px;
-    float: left;
+
+    border: 2px;
+    box-sizing: border-box;
+}
+.corpo .topo .nuevo .logo .imglogo
+{
+	width: 400px;
+    height: 80px;
     background-image:url(images/logo.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: auto;
-    border: 2px;
-    box-sizing: border-box;
+}
+
+.corpo .topo .barNav
+{
+	width: 530px;
+    display: flex;
+    justify-content: space-around;
 }
 
 .corpo .topo .barNav a {
-position: relative; 
-font-size: 1.2em;
-color: #000;
-text-decoration: none;
-background:  #cccccc;
-text-align: center;
-padding: 1px 5px;
-left: -152px;   
-top : 148px;
-border: 1px solid #000;
+	
+	text-transform: uppercase;
+    font-size: 14px;
+    font-weight: bold;
+	color: #000;
+	text-decoration: none;
+	text-align: center;
+	padding: 1px 5px;
 }
 
 .barNav a:hover {
-color: #666;
-background: #e3e3e3;
-border: 1px solid #666;
+	color: #666;
+	background: #e3e3e3;
+	border: 1px solid #666;
 }
 
 .loginRR{
-    position: relative;
-    /*margin: 1.75em;*/
-    top : -40px;
-    left : -60px;
-    /*margin-top: 0.0em;*/
-    max-width: 250px;
     width: 100%;
-    float: right;
     font-size: 1.5em;
+    padding: .5em 0;
+    background: #FFD800;
     font-family: 'Open Sans';
 }
 
 .loginRR input[type="text"]{
     font-size: 0.75em;
     font-family: 'Open Sans';
-    padding: 10px 10px; 
+    padding: 10px 10px;
+    margin: 0 1em 0 0;
     line-height: 28px;
 }
 .loginRR input[type="password"]{
     font-size: 0.75em;
     font-family: 'Open Sans';
-    padding: 10px 10px; 
+    padding: 10px 10px;
+    margin: 0 1em 0 0;
     line-height: 28px;
 }
 
@@ -141,6 +158,27 @@ border: 1px solid #666;
     width: 100%;
     border: none !important;
     background-color: #EDF3F3;
+}
+
+.corpo2
+{
+	width: 100%;
+	padding: 1.5em 0;
+	position: fixed;
+	bottom: 0;
+	background: black;
+}
+
+.rodape2
+{
+	width:90%;
+	margin: 0 auto;
+}
+
+.infoRodape2
+{
+	display: flex;
+	justify-content: space-between;
 }
 
 .relatorioAling{
