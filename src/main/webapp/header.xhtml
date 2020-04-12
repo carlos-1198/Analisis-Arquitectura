@@ -20,26 +20,32 @@
     <h:body>
         <div class="corpo">
             <div class="topo">
-                <a class="logo" href="index.xhtml" ></a> <!--Atualizar URL após a definição do escopo de sessão.-->
-                <p class="barNav">
-                    <p:link outcome="calendario" value="Calendário Estudante"/>        
-                    <p:link  outcome="termoDeUso.xhtml" value="Termo de uso"/>        
-                    <p:link outcome="relatorio" rendered="#{relatorioMB.administradorLoggedIn}" value="Gerar Relatorios" />
-                </p>
-                <div class="loginRR" style="text-align: center">
-                    <h:form>
-                        <p:inputText rendered="#{loginMB.exibirFormLogin()}" id="username" class="form-control" placeholder="Digite seu R.A" value="#{loginMB.usuario.ra}"  required="true" label="username" />
-                        <p:password rendered="#{loginMB.exibirFormLogin()}" id="password" class="password" placeholder="Digite sua senha" value="#{loginMB.usuario.senha}" required="true"  label="password" />
-                        <h:outputLabel for="usuarioLogadoNome" value="#{loginMB.nomeUsuarioLogado}"/>
-                        <div>
-                            <p:commandButton rendered="#{loginMB.exibirBtnLogout()}" value="Sair" actionListener="#{loginMB.doLogout}"/>
-                            <p:commandButton rendered="#{loginMB.exibirFormLogin()}" value="Login" style="float: left" actionListener="#{loginMB.doLogin}"/>
-                            <p:commandButton disabled="#{loginMB.disabledBotaoCheckout()}" rendered="#{loginMB.logado}" value="Checkin" id="nonAjax" style="float: right" actionListener="#{loginMB.fazerCheckin()}" ajax="false" />
-                            <p:commandButton disabled="#{loginMB.disabledBotaoCheckout()}" rendered="#{loginMB.exibirBotaoCheckout()}" value="Checkout" id="checkout" style="float: right" actionListener="#{loginMB.fazerCheckout()}" ajax="false" />
-                        </div>
-                    </h:form> 
-                </div>
+            	<div class="nuevo">
+            	    <a class="logo" href="index.xhtml" >
+								
+						<div class="imglogo"></div>
+					</a>
+                	<!-- <a class="logo" href="index.xhtml" ></a> Atualizar URL após a definição do escopo de sessão.-->
+                	<p class="barNav">
+                    	<p:link outcome="calendario" value="Calendário Estudante"/>        
+                    	<p:link  outcome="termoDeUso.xhtml" value="Termo de uso"/>        
+                    	<p:link outcome="relatorio" rendered="#{relatorioMB.administradorLoggedIn}" value="Gerar Relatorios" />
+                	</p>
+                </div>                
             </div>
+			<div class="loginRR" style="text-align: center">
+				<h:form style="width: 90%; margin: 0 auto; text-align: left; display: flex">
+					<p:inputText rendered="#{loginMB.exibirFormLogin()}" id="username" class="form-control" placeholder="Digite seu R.A" value="#{loginMB.usuario.ra}"  required="true" label="username" />
+					<p:password rendered="#{loginMB.exibirFormLogin()}" id="password" class="password" placeholder="Digite sua senha" value="#{loginMB.usuario.senha}" required="true"  label="password" />
+					<h:outputLabel for="usuarioLogadoNome" value="#{loginMB.nomeUsuarioLogado}"/>
+					<div>
+						<p:commandButton rendered="#{loginMB.exibirBtnLogout()}" value="Sair" actionListener="#{loginMB.doLogout}"/>
+						<p:commandButton rendered="#{loginMB.exibirFormLogin()}" value="Login" style=" " actionListener="#{loginMB.doLogin}"/>
+						<p:commandButton disabled="#{loginMB.disabledBotaoCheckout()}" rendered="#{loginMB.logado}" value="Checkin" id="nonAjax" style="float: right" actionListener="#{loginMB.fazerCheckin()}" ajax="false" />
+						<p:commandButton disabled="#{loginMB.disabledBotaoCheckout()}" rendered="#{loginMB.exibirBotaoCheckout()}" value="Checkout" id="checkout" style="float: right" actionListener="#{loginMB.fazerCheckout()}" ajax="false" />
+					</div>
+				</h:form> 
+			</div>
         </div>
     </h:body>
 </html>
