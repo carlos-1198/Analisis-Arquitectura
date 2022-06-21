@@ -12,7 +12,7 @@
     <properties>
         <endorsed.dir>${project.build.directory}/endorsed</endorsed.dir>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <mysql.version>5.1.9</mysql.version>
+        <mysql.version>8.0.28</mysql.version>
         <eclipselink.version>2.6.3-M1</eclipselink.version>
     </properties>
     
